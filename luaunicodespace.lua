@@ -9,6 +9,8 @@ local glue = node.id("glue")
 local glue_spec = node.id("glue_spec")
 local penalty = node.id("penalty")
 
+-- derived from
+-- http://en.wikipedia.org/wiki/Space_(punctuation)#Spaces_in_Unicode
 luaunicodespace.spaces = {
     [0x00A0] = { -- No-Break Space
         width = "space",
