@@ -1,6 +1,6 @@
 \input luatexbase.sty
 \directlua {
-dofile('luaunicodespace.lua')
+require('luaunicodespace')
 luatexbase.add_to_callback("pre_linebreak_filter", luaunicodespace.handler, "luaotfload", 1)
 luatexbase.add_to_callback("hpack_filter",         luaunicodespace.handler, "luaotfload", 1)
 }
