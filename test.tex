@@ -1,0 +1,22 @@
+\input luatexbase.sty
+\directlua {
+dofile('luaunicodespace.lua')
+luatexbase.add_to_callback("pre_linebreak_filter", luaunicodespace.handler, "luaotfload", 1)
+luatexbase.add_to_callback("hpack_filter",         luaunicodespace.handler, "luaotfload", 1)
+}
+
+\def\test#1{K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny K.#1Hosny\par}
+
+\test{~}
+\test{ }
+\test{ }
+\test{ }
+\test{ }
+\test{ }
+\test{ }
+\test{ }
+\test{ }
+\test{​}
+\test{ }
+\test{⁠}
+\bye
